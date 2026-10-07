@@ -157,11 +157,14 @@ class Config:
         if not file.endswith('.json'):
             file += ".json"
 
-        if not file.startswith("/"):
-            # a config can be specified with a full path, allowing it to be saved outside the configs folder
-            # prepend the full path up to the configs folder
-            preceding_path = Config.find_path_containing_file(file)
-            file = os.path.join(preceding_path, file)
+        if os.path.isabs(file):
+            # Saved run configs are passed as full paths. On Windows those do not start with "/".
+            return file
+
+        # a config can be specified with a full path, allowing it to be saved outside the configs folder
+        # prepend the full path up to the configs folder
+        preceding_path = Config.find_path_containing_file(file)
+        file = os.path.join(preceding_path, file)
 
         return file
 
