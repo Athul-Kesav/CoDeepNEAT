@@ -1,5 +1,6 @@
 from typing import List
 
+import src.utils.numpy_compat  # noqa: F401  must run before imgaug on NumPy 2
 import imgaug.augmenters as iaa
 
 # Dictionary containing all possible augmentation functions

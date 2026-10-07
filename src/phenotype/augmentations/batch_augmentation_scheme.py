@@ -2,6 +2,7 @@ import random
 from typing import List
 
 import cv2
+import src.utils.numpy_compat  # noqa: F401  must run before imgaug on NumPy 2
 import imgaug.augmenters as iaa
 import numpy as np
 import torch

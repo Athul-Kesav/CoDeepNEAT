@@ -1,5 +1,6 @@
 import random
 
+import src.utils.numpy_compat  # noqa: F401  must run before imgaug on NumPy 2
 import imgaug.augmenters as iaa
 import numpy as np
 from configuration import config

@@ -5,7 +5,7 @@ from runs.runs_manager import get_generations_folder_path, get_run_folder_path, 
     set_up_run_folder, load_config
 
 
-def fetch_run(run_id: str = '', run_path: str = '') -> wandb.wandb_run:
+def fetch_run(run_id: str = '', run_path: str = ''):
     if not run_path:
         run_path = 'codeepneat/cdn/' + run_id
     return wandb.Api().run(run_path)

@@ -1,0 +1,13 @@
+{
+  "run_name": "cifar10",
+  "dataset": "cifar10",
+  "num_output_classes": 10,
+  "device": "gpu",
+  "n_gpus": 1,
+  "batch_size": 128,
+  "use_wandb": false,
+  "download_dataset": true,
+  "plot_best_genotypes": false,
+  "plot_best_phenotype": false,
+  "wandb_tags": ["cifar10"]
+}
