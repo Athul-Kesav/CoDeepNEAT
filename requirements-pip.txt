@@ -1,0 +1,15 @@
+# pip install -r requirements-pip.txt
+# Tested with Python 3.13. The CUDA 12.4 wheels support RTX 6000 Ada and the GTX 1650.
+# The graphviz package also needs the Graphviz system binary (the `dot` command).
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+numpy==2.5.2
+matplotlib==3.11.2
+scikit-learn==1.9.1
+graphviz==0.21
+imgaug==0.4.0
+tarjan==0.2.4
+wandb==0.30.0
