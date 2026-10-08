@@ -4,6 +4,16 @@ import atexit
 import os
 import sys
 
+# Some Python installations ship typing_extensions in the standard library
+# path, which can shadow the newer version installed in this environment.
+venv_site_packages = os.path.join(
+    sys.prefix, 'lib', f'python{sys.version_info.major}.{sys.version_info.minor}', 'site-packages'
+)
+if os.path.isdir(venv_site_packages):
+    sys.path.insert(0, venv_site_packages)
+    import typing_extensions
+    sys.path.remove(venv_site_packages)
+
 # For importing project files
 dir_path = os.path.dirname(os.path.realpath(__file__))
 dir_path_1 = os.path.split(os.path.split(dir_path)[0])[0]

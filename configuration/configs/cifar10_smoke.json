@@ -1,0 +1,19 @@
+{
+  "run_name": "cifar10_smoke",
+  "dataset": "cifar10",
+  "num_output_classes": 10,
+  "device": "gpu",
+  "n_gpus": 1,
+  "batch_size": 128,
+  "use_wandb": false,
+  "download_dataset": true,
+  "n_generations": 4,
+  "epochs_in_evolution": 5,
+  "bp_pop_size": 2,
+  "module_pop_size": 2,
+  "da_pop_size": 2,
+  "n_evals_per_bp": 1,
+  "plot_best_genotypes": false,
+  "plot_best_phenotype": false,
+  "wandb_tags": ["cifar10", "smoke"]
+}

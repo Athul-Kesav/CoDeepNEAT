@@ -1,0 +1,9 @@
+{
+  "run_name": "cifar10_smoke",
+  "device": "gpu",
+  "n_gpus": 1,
+  "fully_train_max_epochs": 5,
+  "fully_train_best_n_blueprints": 1,
+  "ft_feature_multipliers": [1],
+  "use_wandb": false
+}

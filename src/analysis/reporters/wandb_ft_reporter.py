@@ -29,6 +29,9 @@ class WandbFTReporter(BaseReporter):
     def on_end_train(self, blueprint: BlueprintGenome, accuracy: float):
         """Creates the wandb run and logs all relevant data if run was not a 'dud'"""
 
+        if not config.use_wandb:
+            return
+
         fm_tag = f'FM={self.fm}'  # wandb tag for feature mul so that we can tell the difference
         best_tag = f'BEST={self.best}'  # wandb tag for Nth best network in evolution
 
